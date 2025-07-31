@@ -1,12 +1,35 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useEffect } from 'react';
+import Header from '@/components/Header';
+import Hero from '@/components/Hero';
+import About from '@/components/About';
+import Projects from '@/components/Projects';
+import Contact from '@/components/Contact';
+import Blog from '@/components/Blog';
+import Footer from '@/components/Footer';
 
 const Index = () => {
+  useEffect(() => {
+    // Update page title
+    document.title = "Nazia Khatoon | Full-Stack Developer Portfolio";
+    
+    // Update meta description
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Portfolio of Nazia Khatoon - Full-Stack Developer and Electronics & Communication Engineering Student. Showcasing modern web development projects and engineering solutions.');
+    }
+  }, []);
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen">
+      <Header />
+      <main>
+        <Hero />
+        <About />
+        <Projects />
+        <Blog />
+        <Contact />
+      </main>
+      <Footer />
     </div>
   );
 };

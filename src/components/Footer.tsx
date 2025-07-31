@@ -12,7 +12,7 @@ const Footer = () => {
   }, {
     name: 'Email',
     icon: <Mail className="w-5 h-5" />,
-    url: 'https://myaccount.google.com/?utm_source=chrome-profile-chooser&pli=1'
+    url: 'https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox'
   }];
   return <footer className="py-12 px-6 border-t border-border/20">
       <div className="container mx-auto max-w-6xl">

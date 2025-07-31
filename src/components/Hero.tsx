@@ -2,60 +2,46 @@ import { ArrowDown, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import heroImage from '@/assets/hero-bg.jpg';
 import profileImage from '@/assets/profile-placeholder.jpg';
-
 const Hero = () => {
   const scrollToAbout = () => {
     const aboutSection = document.querySelector('#about');
     if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: 'smooth' });
+      aboutSection.scrollIntoView({
+        behavior: 'smooth'
+      });
     }
   };
-
-  return (
-    <section 
-      id="home" 
-      className="min-h-screen flex items-center justify-center relative overflow-hidden"
-      style={{
-        backgroundImage: `url(${heroImage})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundAttachment: 'fixed'
-      }}
-    >
+  return <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden" style={{
+    backgroundImage: `url(${heroImage})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundAttachment: 'fixed'
+  }}>
       {/* Overlay */}
       <div className="absolute inset-0 bg-background/80 backdrop-blur-sm"></div>
       
       {/* Floating particles */}
       <div className="absolute inset-0 overflow-hidden">
-        {[...Array(20)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-2 h-2 bg-primary/30 rounded-full floating"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 6}s`,
-            }}
-          />
-        ))}
+        {[...Array(20)].map((_, i) => <div key={i} className="absolute w-2 h-2 bg-primary/30 rounded-full floating" style={{
+        left: `${Math.random() * 100}%`,
+        top: `${Math.random() * 100}%`,
+        animationDelay: `${Math.random() * 6}s`
+      }} />)}
       </div>
 
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
         {/* Profile Image */}
         <div className="mb-8 relative">
           <div className="w-40 h-40 mx-auto relative">
-            <img
-              src={profileImage}
-              alt="Nazia Khatoon"
-              className="w-full h-full rounded-full object-cover border-4 border-primary/30 hover-glow"
-            />
+            <img src={profileImage} alt="Nazia Khatoon" className="w-full h-full rounded-full object-cover border-4 border-primary/30 hover-glow" />
             <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary/20 to-secondary/20 pulse-glow"></div>
           </div>
         </div>
 
         {/* Name */}
         <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in-up">
-          <span className="gradient-text glow-text">Nazia Khatoon</span>
+          <span className="gradient-text glow-text">Naziya Khatoon
+        </span>
         </h1>
 
         {/* Subtitle */}
@@ -70,19 +56,11 @@ const Hero = () => {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-fade-in-up">
-          <Button 
-            size="lg" 
-            className="hover-glow bg-primary text-primary-foreground hover:bg-primary/90"
-            onClick={scrollToAbout}
-          >
+          <Button size="lg" className="hover-glow bg-primary text-primary-foreground hover:bg-primary/90" onClick={scrollToAbout}>
             Explore My Work
             <ArrowDown className="ml-2 h-5 w-5" />
           </Button>
-          <Button 
-            size="lg" 
-            variant="outline" 
-            className="hover-glow border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-          >
+          <Button size="lg" variant="outline" className="hover-glow border-primary text-primary hover:bg-primary hover:text-primary-foreground">
             Download Resume
             <Download className="ml-2 h-5 w-5" />
           </Button>
@@ -95,8 +73,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;

@@ -8,11 +8,11 @@ const Footer = () => {
   }, {
     name: 'LinkedIn',
     icon: <Linkedin className="w-5 h-5" />,
-    url: 'https://linkedin.com/in/naziakhatoon'
+    url: 'https://www.linkedin.com/in/naziya-khatoon-85293935a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
   }, {
     name: 'Email',
     icon: <Mail className="w-5 h-5" />,
-    url: 'mailto:nazia@example.com'
+    url: 'khatoonaziya465@gmail.com'
   }];
   return <footer className="py-12 px-6 border-t border-border/20">
       <div className="container mx-auto max-w-6xl">

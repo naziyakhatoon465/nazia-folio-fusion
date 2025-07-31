@@ -45,9 +45,7 @@ const Hero = () => {
         </h1>
 
         {/* Subtitle */}
-        <h2 className="text-xl md:text-2xl text-muted-foreground mb-6 animate-slide-in-right">
-          Full-Stack Developer & Electronics and Communication Engineering Student
-        </h2>
+        <h2 className="text-xl md:text-2xl text-muted-foreground mb-6 animate-slide-in-right">Electronics and Communication Engineering </h2>
 
         {/* Animated Tagline */}
         <p className="text-lg md:text-xl text-accent mb-8 animate-scale-up glow-text">

@@ -80,7 +80,7 @@ const Contact = () => {
     {
       icon: <Mail className="w-5 h-5 text-primary" />,
       title: "Email",
-      details: "nazia@example.com"
+      details: "khatoonaziya465@gmail.com"
     }
   ];
 

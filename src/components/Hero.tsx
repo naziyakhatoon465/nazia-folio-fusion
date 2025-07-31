@@ -1,7 +1,7 @@
 import { ArrowDown, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import heroImage from '@/assets/hero-bg.jpg';
-import profileImage from '@/assets/profile-placeholder.jpg';
+const profileImage = '/lovable-uploads/8c7aa99f-3df2-452a-bc49-649909fb7562.png';
 const Hero = () => {
   const scrollToAbout = () => {
     const aboutSection = document.querySelector('#about');

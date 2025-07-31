@@ -70,7 +70,7 @@ const Contact = () => {
     {
       icon: <MapPin className="w-5 h-5 text-primary" />,
       title: "Location",
-      details: "Available for Remote Work"
+      details: "BC-Colony, Banaganapallie, Andhra pradesh"
     },
     {
       icon: <Phone className="w-5 h-5 text-primary" />,

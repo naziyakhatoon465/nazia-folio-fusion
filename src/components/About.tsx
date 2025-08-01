@@ -11,7 +11,7 @@ const About = () => {
     description: "Class Representative for B.Tech - leading teams and driving collaborative solutions"
   }, {
     icon: <Code className="w-8 h-8 text-primary" />,
-    title: "Creativity in Art and Craft",
+    title: "Creativity",
     description: "Expressing creativity through various art forms and handcrafted projects"
   }, {
     icon: <Target className="w-8 h-8 text-primary" />,

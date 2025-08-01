@@ -45,7 +45,7 @@ const About = () => {
             </div>
             
             <div className="flex flex-wrap gap-3">
-              {['React', 'Node.js', 'TypeScript', 'Python', 'MongoDB', 'PostgreSQL', 'AWS', 'Docker'].map(tech => (
+              {['Python', 'C', 'HTML & CSS', 'Figma', 'Git-GitHub', 'Django'].map(tech => (
                 <span key={tech} className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium border border-primary/20">
                   {tech}
                 </span>

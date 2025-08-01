@@ -2,10 +2,6 @@ import { Code, Cpu, Lightbulb, Target } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 const About = () => {
   const skills = [{
-    icon: <Code className="w-8 h-8 text-primary" />,
-    title: "Full-Stack Development",
-    description: "Building end-to-end web applications with modern technologies"
-  }, {
     icon: <Cpu className="w-8 h-8 text-secondary" />,
     title: "Electronics & Communication",
     description: "Deep understanding of hardware and communication systems"
@@ -13,6 +9,10 @@ const About = () => {
     icon: <Lightbulb className="w-8 h-8 text-accent" />,
     title: "Leadership",
     description: "Class Representative for B.Tech - leading teams and driving collaborative solutions"
+  }, {
+    icon: <Code className="w-8 h-8 text-primary" />,
+    title: "Full-Stack Development",
+    description: "Building end-to-end web applications with modern technologies"
   }, {
     icon: <Target className="w-8 h-8 text-primary" />,
     title: "Performance Focus",

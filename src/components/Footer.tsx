@@ -31,9 +31,7 @@ const Footer = () => {
 
         <div className="border-t border-border/20 pt-6 mt-6 text-center">
           <p className="text-muted-foreground flex items-center justify-center gap-2">
-            © {currentYear} Nazia Khatoon. Made with 
-            <Heart className="w-4 h-4 text-red-500" /> 
-            and lots of coffee.
+            Thank you for visiting my portfolio!
           </p>
         </div>
       </div>

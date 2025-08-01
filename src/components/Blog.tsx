@@ -20,7 +20,7 @@ const Blog = () => {
     {
       icon: <BookOpen className="w-8 h-8 text-accent" />,
       degree: "SSC",
-      institution: "Dolphin English Medium, Gulbarga, Karnataka",
+      institution: "Dolphin English Medium School, Gulbarga, Karnataka",
       period: "2020",
       type: "Completed"
     }

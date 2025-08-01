@@ -11,8 +11,8 @@ const About = () => {
     description: "Deep understanding of hardware and communication systems"
   }, {
     icon: <Lightbulb className="w-8 h-8 text-accent" />,
-    title: "Creative Problem Solving",
-    description: "Innovative solutions to complex technical challenges"
+    title: "Leadership",
+    description: "Class Representative for B.Tech - leading teams and driving collaborative solutions"
   }, {
     icon: <Target className="w-8 h-8 text-primary" />,
     title: "Performance Focus",

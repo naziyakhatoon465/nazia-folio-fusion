@@ -1,97 +1,81 @@
-import { Award, Calendar } from 'lucide-react';
+import { ExternalLink, Figma } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import projectDemo from '@/assets/project-demo.jpg';
 
 const Projects = () => {
-  const certificates = [
+  const projects = [
     {
-      title: "Oracle Certified Foundations Associate",
-      description: "Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate certification demonstrating expertise in cloud infrastructure and AI foundations.",
-      image: "/lovable-uploads/f4b5e96a-fbce-432b-a228-ae35552eaec1.png",
-      issuer: "Oracle Corporation",
-      date: "August 01, 2025",
-      validUntil: "August 01, 2027",
-      skills: ["Cloud Infrastructure", "AI Foundations", "Oracle Cloud"]
-    },
-    {
-      title: "Certificate of Internship - Web Development",
-      description: "Successfully completed short-term internship programme in Web Development, demonstrating practical skills in modern web technologies.",
-      image: "/lovable-uploads/dc069bed-5ac5-41f0-b0eb-42e4e45dfcbe.png",
-      issuer: "SkillDzire",
-      date: "May 12, 2025 - July 12, 2025",
-      institution: "SVR Engineering College, JNTUA Anantapur",
-      skills: ["Web Development", "HTML/CSS", "JavaScript", "Frontend Development"]
+      title: "Travel Booking App UI",
+      description: "Designed a travel booking app UI in Figma, focusing on intuitive navigation, user-friendly layout, and responsive design principles. Implemented features like destination search, booking flow, and personalized recommendations with a modern visual aesthetic.",
+      image: projectDemo,
+      technologies: ["Figma", "UI/UX Design", "Responsive Design", "User Experience"],
+      category: "UI/UX Design",
+      status: "Completed"
     }
   ];
 
   return (
-    <section id="certificates" className="py-20 px-6">
+    <section id="projects" className="py-20 px-6">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">
-            Certificates
+            Projects
           </h2>
           <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Professional certifications and achievements in technology and skills development
+            Showcase of my design and development work, featuring user-centered solutions and modern aesthetics
           </p>
         </div>
 
         <div className="max-w-4xl mx-auto space-y-8">
-          {certificates.map((certificate, index) => (
+          {projects.map((project, index) => (
             <Card key={index} className="glass-card border-border/20 hover-glow group overflow-hidden">
               <div className="relative overflow-hidden">
                 <img
-                  src={certificate.image}
-                  alt={certificate.title}
+                  src={project.image}
+                  alt={project.title}
                   className="w-full h-64 md:h-80 object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
+                <div className="absolute top-4 right-4">
+                  <span className="px-3 py-1 bg-primary/90 text-primary-foreground rounded-full text-sm font-medium">
+                    {project.status}
+                  </span>
+                </div>
               </div>
               
               <CardContent className="p-8">
+                <div className="flex items-center gap-2 mb-4">
+                  <Figma className="h-5 w-5 text-primary" />
+                  <span className="text-sm text-primary font-medium">{project.category}</span>
+                </div>
+                
                 <h3 className="text-2xl font-bold mb-4 text-foreground">
-                  {certificate.title}
+                  {project.title}
                 </h3>
                 
                 <p className="text-muted-foreground mb-6 leading-relaxed">
-                  {certificate.description}
+                  {project.description}
                 </p>
                 
                 <div className="flex flex-wrap gap-3 mb-6">
-                  {certificate.skills.map((skill) => (
+                  {project.technologies.map((tech) => (
                     <span 
-                      key={skill}
+                      key={tech}
                       className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm border border-primary/20"
                     >
-                      {skill}
+                      {tech}
                     </span>
                   ))}
                 </div>
                 
-                <div className="flex flex-col sm:flex-row gap-4 items-center">
-                  <div className="flex items-center text-muted-foreground">
-                    <Award className="mr-2 h-5 w-5 text-primary" />
-                    <span>Issued by {certificate.issuer}</span>
-                  </div>
-                  <div className="flex items-center text-muted-foreground">
-                    <Calendar className="mr-2 h-5 w-5 text-primary" />
-                    <span>{certificate.date}</span>
-                  </div>
-                  {certificate.validUntil && (
-                    <div className="flex items-center text-muted-foreground">
-                      <Calendar className="mr-2 h-5 w-5 text-primary" />
-                      <span>Valid until {certificate.validUntil}</span>
-                    </div>
-                  )}
+                <div className="flex gap-4">
+                  <Button variant="outline" className="flex items-center gap-2">
+                    <ExternalLink className="h-4 w-4" />
+                    View Design
+                  </Button>
                 </div>
-                
-                {certificate.institution && (
-                  <div className="mt-4 text-sm text-muted-foreground">
-                    <span className="font-medium">Institution:</span> {certificate.institution}
-                  </div>
-                )}
               </CardContent>
             </Card>
           ))}

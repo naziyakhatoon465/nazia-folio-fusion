@@ -4,7 +4,7 @@ const Footer = () => {
   const socialLinks = [{
     name: 'GitHub',
     icon: <Github className="w-5 h-5" />,
-    url: 'https://github.com/naziakhatoon'
+    url: 'https://github.com/naziyakhatoon465'
   }, {
     name: 'LinkedIn',
     icon: <Linkedin className="w-5 h-5" />,

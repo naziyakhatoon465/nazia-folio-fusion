@@ -55,7 +55,7 @@ const Contact = () => {
     {
       name: 'GitHub',
       icon: <Github className="w-6 h-6" />,
-      url: 'https://github.com/naziakhatoon',
+      url: 'https://github.com/naziyakhatoon465',
       color: 'hover:text-purple-400'
     },
     {
